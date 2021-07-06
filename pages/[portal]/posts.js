@@ -45,8 +45,7 @@ function PortalList({ allPostsData }) {
 
     return (
       <>
-      {console.log(page)}
-        <h3>{ `Achamos o total de ${rows[portal]} imóveis` }</h3>
+        <h3 className={`${utilStyles.centerText} ${utilStyles.colorGrupoZap}`}>{ `Resultado de ${rows[portal]} imóveis` }</h3>
         <ul className={ utilStyles.list }>
           { paginateData.map((data) => (
             <ListItem key={ data.id } data={ data } portal={ portal } page={page} />

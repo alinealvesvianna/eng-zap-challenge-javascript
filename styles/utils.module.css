@@ -35,6 +35,10 @@
   color: #c8cf49
 }
 
+.centerText {
+  text-align: center;
+}
+
 .notBold {
   font-weight: normal;
 }

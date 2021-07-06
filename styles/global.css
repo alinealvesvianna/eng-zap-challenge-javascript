@@ -1,3 +1,6 @@
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 html,
 body {
   padding: 0;
@@ -24,4 +27,13 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.galeryContainer{
+  background: #c8cf49;
+}
+
+.image-gallery-content:not(.fullscreen) .image-gallery-slide img {
+  width: 100%;
+  height: 300px;
 }

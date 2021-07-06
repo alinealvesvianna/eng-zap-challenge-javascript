@@ -29,12 +29,14 @@ const Header = ({ home = false, name, portalName = '' }) => {
               <a className={ utilStyles.colorInherit }>{ name }</a>
             </Link>
           </h2>
-          <h3 className={ `${utilStyles.headingSm} ${utilStyles.notBold}` }>
-          Esses anúncios são da {' '}
-          <strong className={`${utilStyles.capitalize} ${utilStyles.colorGrupoZap}`}>
-              { portalName.split('-').join(' ') }
-            </strong>
-          </h3>
+          {portalName && (
+            <h3 className={ `${utilStyles.headingSm} ${utilStyles.notBold}` }>
+              Esses anúncios são da { ' ' }
+              <strong className={ `${utilStyles.capitalize} ${utilStyles.colorGrupoZap}` }>
+                { portalName.split('-').join(' ') }
+              </strong>
+            </h3>
+          )}
         </>
       )
     }

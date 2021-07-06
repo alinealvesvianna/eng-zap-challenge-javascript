@@ -1,41 +1,62 @@
 
 import Link from 'next/link'
+import CurrencyFormat from 'react-currency-format'
+import { CURRENCY_CONFIG } from '../../utils/consts'
 import utilStyles from '../../styles/utils.module.css'
+import listItemStyles from './index.module.css'
+import Galery from '../Galery'
+
 
 const ListItem = ({ data, portal, page }) => {
 
-  const { usableAreas, id, parkingSpaces, images, bathrooms, bedrooms, pricingInfos } = data
-  const isSale = pricingInfos?.businessType === 'SALE'
+  const { id, images, pricingInfos } = data
+  const isSale = pricingInfos ?.businessType === 'SALE'
 
   return (
-    <li className={ utilStyles.listItem }>
+    <li className={ `${utilStyles.listItem} ${listItemStyles.listItemContainer}` }>
+      <Galery images={ images } />
       <Link href={ `/${portal}/post/${id}?page=${page ? page : '1'}` }>
-        <a>
-          { `Imóvel para ${isSale ? 'Venda' : 'Aluguel'}` }
-          <ul>
+        <a className={ `${utilStyles.headingSm} ${listItemStyles.listItemContainerInfos}` }>
+          <strong>{ `Imóvel para ${isSale ? 'Venda' : 'Aluguel'}` }</strong>
+          <ul className={ `${utilStyles.list}` }>
             <li className={ utilStyles.lightText }>
-              { `${isSale ? pricingInfos?.price : pricingInfos?.rentalTotalPrice}` } {`${isSale ? 'Preço' : 'Aluguel'}`}
+              <strong>{ `${isSale ? 'Preço:' : 'Aluguel:'} ` }</strong>
+              { isSale ?
+                (<CurrencyFormat
+                  value={ pricingInfos?.price }
+                  displayType={ CURRENCY_CONFIG.displayType }
+                  thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
+                  prefix={ CURRENCY_CONFIG.prefix }
+                />)
+                :
+                (<CurrencyFormat
+                  value={ pricingInfos?.rentalTotalPrice }
+                  displayType={ CURRENCY_CONFIG.displayType }
+                  thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
+                  prefix={ CURRENCY_CONFIG.prefix }
+                />)
+              }
             </li>
             <li className={ utilStyles.lightText }>
-              condomínio { pricingInfos?.monthlyCondoFee }
+              <strong>Condomínio: </strong>
+              <CurrencyFormat
+                value={ pricingInfos?.monthlyCondoFee }
+                displayType={ CURRENCY_CONFIG.displayType }
+                thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
+                prefix={ CURRENCY_CONFIG.prefix }
+              />
             </li>
-            {pricingInfos?.yearlyIptu && (
+            { pricingInfos ?.yearlyIptu && (
               <li className={ utilStyles.lightText }>
-                Iptu { pricingInfos?.yearlyIptu }
+                <strong>Iptu: </strong>
+                <CurrencyFormat
+                  value={ pricingInfos?.yearlyIptu }
+                  displayType={ CURRENCY_CONFIG.displayType }
+                  thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
+                  prefix={ CURRENCY_CONFIG.prefix }
+                />
               </li>
             )}
-            <li className={ utilStyles.lightText }>
-              { usableAreas } m2
-            </li>
-            <li className={ utilStyles.lightText }>
-              { bathrooms } banheiros
-            </li>
-            <li className={ utilStyles.lightText }>
-              { parkingSpaces } vagas
-            </li>
-            <li className={ utilStyles.lightText }>
-              { bedrooms } quartos
-            </li>
           </ul>
         </a>
       </Link>

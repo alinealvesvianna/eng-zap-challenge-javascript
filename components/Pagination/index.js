@@ -1,4 +1,5 @@
 import { useState, useLayoutEffect } from 'react'
+import paginationStyle from './index.module.css'
 
 const Pagination = ({ limit, rows, callbackPagination, selected }) => {
   const [pages, setPages] = useState(null)
@@ -18,29 +19,28 @@ const Pagination = ({ limit, rows, callbackPagination, selected }) => {
   }
 
   return (
-    <>
+    <section className={paginationStyle.containerPagination}>
       {pages &&
         Array(pages)
           .fill()
           .map((_, index) => {
+            const isSelected = +pageSelect === index + 1
+
             return (
               <>
-                <span
+                <small
+                  className={`${paginationStyle.paginationItens} ${isSelected && paginationStyle.selected }`}
                   id={index + 1}
                   data-actual={index + 1}
-                  style={{
-                    background: +pageSelect === index + 1 ? '#f0f' : '#fff',
-                    border: '1px solid #f0f',
-                  }}
                   onClick={handlePages}
                   key={index}
                 >
                   {index + 1}
-                </span>
+                </small>
               </>
             )
           })}
-    </>
+    </section>
   )
 }
 

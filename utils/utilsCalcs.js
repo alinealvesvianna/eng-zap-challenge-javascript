@@ -5,3 +5,10 @@ export function percentage(totalValue, perc) {
 export function squareMetreValue(imovelTotalValue, totalSquareMetre) {
   return imovelTotalValue / totalSquareMetre
 }
+
+export function pluralOrSingular(item){
+  if(item > 1){
+    return 's'
+  }
+  return ''
+}
