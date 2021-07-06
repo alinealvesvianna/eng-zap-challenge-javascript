@@ -1,0 +1,92 @@
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.headingSm {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.colorGrupoZap {
+  color: #c8cf49
+}
+
+.notBold {
+  font-weight: normal;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.colorInherit {
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.lightText {
+  color: #666;
+}
+
+.linkButton {
+  border: 3px solid none;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  height: 100%;
+}
+
+.linkButton p {
+  align-self: center;
+}
+
+.linkButton img {
+  filter: brightness(0) invert(1);
+}
+
+.gridAuto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  grid-gap: 32px;
+}
+
+.marginTop2rem {
+  margin-top: 2rem;
+}
