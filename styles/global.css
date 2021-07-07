@@ -30,7 +30,7 @@ img {
 }
 
 .galeryContainer{
-  background: #c8cf49;
+  background-color: #c8cf49;
 }
 
 .image-gallery-content:not(.fullscreen) .image-gallery-slide img {
