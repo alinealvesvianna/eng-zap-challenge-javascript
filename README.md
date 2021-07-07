@@ -5,6 +5,8 @@
 
 Esse desafio foi desenvolvido em Next.js, React, Css Modules. O projeto foi construído como Static Site Generation, porque o conteúdo não mudava. Com isso, o intuito foi otimizar a renderização de gerando o HTML uma única vez ao invés de renderizá-lo em todas as requisições.
 
+Abrir o link do site publicado no firefox, porque no chrome o carregamento das imagens é bloqueado.
+
 ## Instalação / Getting started
 
 Para rodar o projeto é super simples:
