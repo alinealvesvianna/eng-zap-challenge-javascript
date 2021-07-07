@@ -3,7 +3,6 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getPortalsData } from '../lib/portals'
 import Link from 'next/link'
-import Image from 'next/image'
 
 
 function Button({ infos }) {
@@ -33,7 +32,7 @@ export default function Home({ allPortalsData }) {
           <Button key={ data.id } infos={ data } />
         )) }
       </section>
-      <Image src={'https://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic8.jpg'} alt='Home Page' width={100} height={100} />
+      <img src={'https://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic8.jpg'} alt='Home Page' width={100} height={100} />
     </Layout>
   )
 }
