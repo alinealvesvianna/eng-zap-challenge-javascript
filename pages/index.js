@@ -32,7 +32,6 @@ export default function Home({ allPortalsData }) {
           <Button key={ data.id } infos={ data } />
         )) }
       </section>
-      <img src={'https://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic8.jpg'} alt='Home Page' width={100} height={100} />
     </Layout>
   )
 }
