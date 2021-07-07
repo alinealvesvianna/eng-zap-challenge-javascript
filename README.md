@@ -13,7 +13,7 @@ Para rodar o projeto é super simples:
 
 ```shell
 npm install
-npm start
+npm run dev
 ```
 
 Esses comandos iniciam Next.js no modo de desenvolvimento.
