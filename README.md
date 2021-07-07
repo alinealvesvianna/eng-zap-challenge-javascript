@@ -3,9 +3,9 @@
 # Desafio de Engenharia Grupo Zap
 > [Link para visualizar o desafio](https://eng-zap-challenge-javascript-ten.vercel.app)
 
-Esse desafio foi desenvolvido em Next.js, React, Css Modules. O projeto foi construído como Static Site Generation, porque o conteúdo não mudava. Com isso, o intuito foi otimizar a renderização de gerando o HTML uma única vez ao invés de renderizá-lo em todas as requisições.
+Esse desafio foi desenvolvido em Next.js, React, Css Modules. O projeto foi construído como Static Site Generation, porque o conteúdo não sofria atualização constante. Com isso, o intuito foi otimizar a renderização gerando o HTML uma única vez ao invés de renderizá-lo em todas as requisições.
 
-Abrir o link do site publicado no firefox, porque no chrome o carregamento das imagens é bloqueado.
+**Abrir o link do projeto no firefox, porque no chrome o carregamento das imagens é bloqueado.**
 
 ![image](https://user-images.githubusercontent.com/7591901/124693196-603d2980-deb5-11eb-938f-3893c2c34a80.png)
 *mensagem de erro do chrome*
