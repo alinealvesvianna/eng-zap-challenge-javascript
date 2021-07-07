@@ -33,6 +33,8 @@ O projeto foi arquitetado com a seguinte estrutura:
 
 - Na pasta *lib* está uma biblioteca simples que consulta a api, manipula os dados retornados e disponibiliza as informações para as rotas que estão na pasta *pages*. Todas as regras de negócio do desafio estão nesse arquivo.
 
+- Na pasta *components* estão todos os componentes utilizados pelo projeto. O componente chamado *layout.js* é usado como um template para o container de todas as páginas, com todos os metadados e informações necessárias para gerar o HTML. 
+
 ### Building
 
 O projeto foi deployado pela plataforma da vercel.
