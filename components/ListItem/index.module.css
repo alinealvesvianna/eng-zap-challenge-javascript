@@ -1,19 +1,19 @@
 .listItemContainer {
-    margin: 2em auto 3em;
+  margin: 2em auto 3em;
 }
 
 .listItemContainerInfos {
-    font-size: 1.2rem;
-    text-decoration: none!important;
-    display: flex;
-    margin: 1em;
-    color: #c8cf49;
-    align-items: center;
-    justify-content: space-between;
+  font-size: 1.2rem;
+  text-decoration: none!important;
+  display: flex;
+  margin: 1em;
+  color: #c8cf49;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .listItemContainerInfos:hover {
-    color: #aeb528;
+  color: #aeb528;
 }
 
 

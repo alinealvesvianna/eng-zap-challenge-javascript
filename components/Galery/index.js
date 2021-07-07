@@ -1,7 +1,6 @@
 import ImageGallery from 'react-image-gallery'
 
 const Galery = ({ images }) => {
-
   const imagesFormat = images.map(image => ({
     original: image,
     originalHeight: '100%',
@@ -10,11 +9,11 @@ const Galery = ({ images }) => {
 
   return (
     <ImageGallery
-      additionalClass={ 'galeryContainer' }
-      showThumbnails={ false }
-      showBullets={ true }
-      items={ imagesFormat }
-      stopPropagation={ true }
+      additionalClass={'galeryContainer'}
+      showThumbnails={false}
+      showBullets={true}
+      items={imagesFormat}
+      stopPropagation={true}
     />
   )
 }

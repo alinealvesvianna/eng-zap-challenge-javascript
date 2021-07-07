@@ -19,8 +19,8 @@ const Pagination = ({ limit, rows, callbackPagination, selected }) => {
   }
 
   return (
-    <section className={paginationStyle.containerPagination}>
-      {pages &&
+    <section className={ paginationStyle.containerPagination }>
+      { pages &&
         Array(pages)
           .fill()
           .map((_, index) => {
@@ -29,17 +29,17 @@ const Pagination = ({ limit, rows, callbackPagination, selected }) => {
             return (
               <>
                 <small
-                  className={`${paginationStyle.paginationItens} ${isSelected && paginationStyle.selected }`}
-                  id={index + 1}
-                  data-actual={index + 1}
-                  onClick={handlePages}
-                  key={index}
+                  className={ `${paginationStyle.paginationItens} ${isSelected && paginationStyle.selected}` }
+                  id={ index + 1 }
+                  data-actual={ index + 1 }
+                  onClick={ handlePages }
+                  key={ index }
                 >
-                  {index + 1}
+                  { index + 1 }
                 </small>
               </>
             )
-          })}
+          }) }
     </section>
   )
 }

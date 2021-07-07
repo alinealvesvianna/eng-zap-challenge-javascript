@@ -39,7 +39,7 @@ export default function Layout({ children, home = false, portalName = '', link =
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="canonical" href="https://oimod.oi.com.br/" />
+        <link rel="canonical" href="https://eng-zap-challenge-javascript-ten.vercel.app/" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="robots" content="index,follow" />
@@ -55,12 +55,12 @@ export default function Layout({ children, home = false, portalName = '', link =
         <meta name="og:title" content={ siteTitle } />
         <meta
           property="og:url"
-          content="TROCAR"
+          content="https://eng-zap-challenge-javascript-ten.vercel.app/"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Aqui eu coloco uma descrição bacana para o facebook"
+          content="Portal de imóveis do Grupo zap"
         />
         <meta
           property="og:image"
@@ -71,11 +71,11 @@ export default function Layout({ children, home = false, portalName = '', link =
         <meta name="twitter:site" content="@TechGrupoZAP" />
         <meta
           name="twitter:title"
-          content="Grupo Zap | Aqui eu coloco um título bacana pra compartilhar no twitter"
+          content="Grupo Zap | O portal de imóveis do grupo."
         />
         <meta
           name="twitter:description"
-          content="Aqui eu coloco uma descrição bacana para o twitter"
+          content="Mais detalhes do portal de imóveis."
         />
         <meta
           name="twitter:image"

@@ -10,7 +10,7 @@ import Galery from '../Galery'
 const ListItem = ({ data, portal, page }) => {
 
   const { id, images, pricingInfos } = data
-  const isSale = pricingInfos ?.businessType === 'SALE'
+  const isSale = pricingInfos?.businessType === 'SALE'
 
   return (
     <li className={ `${utilStyles.listItem} ${listItemStyles.listItemContainer}` }>

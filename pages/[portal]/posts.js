@@ -28,16 +28,12 @@ function PortalList({ allPostsData }) {
       const initialPostion = (+page - 1) * limit
       const finalPosition = +page * limit
       const sliceData = allPostsData?.[portal]?.slice(initialPostion, finalPosition)
-
       setPaginateData(sliceData)
 
     } else {
-
       const sliceData = allPostsData?.[portal]?.slice(0, limit)
-
       setPaginateData(sliceData)
     }
-
   }, [page])
 
   const renderListResult = () => {
@@ -45,10 +41,10 @@ function PortalList({ allPostsData }) {
 
     return (
       <>
-        <h3 className={`${utilStyles.centerText} ${utilStyles.colorGrupoZap}`}>{ `Resultado de ${rows[portal]} imóveis` }</h3>
+        <h3 className={ `${utilStyles.centerText} ${utilStyles.colorGrupoZap}` }>{ `Resultado de ${rows[portal]} imóveis` }</h3>
         <ul className={ utilStyles.list }>
           { paginateData.map((data) => (
-            <ListItem key={ data.id } data={ data } portal={ portal } page={page} />
+            <ListItem key={ data.id } data={ data } portal={ portal } page={ page } />
           )) }
         </ul>
         <Pagination selected={ page } callbackPagination={ handlePagination } limit={ limit } rows={ rows[portal] } />
@@ -75,7 +71,7 @@ function PortalList({ allPostsData }) {
       </Head>
       <section className={ `${utilStyles.headingMd}` }>
         { allPostsData?.error && renderError() }
-        { !!allPostsData?.[portal] ?.length && renderListResult() }
+        { !!allPostsData?.[portal]?.length && renderListResult() }
       </section>
     </Layout>
   )
