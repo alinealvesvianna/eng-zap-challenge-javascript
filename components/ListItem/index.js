@@ -21,21 +21,12 @@ const ListItem = ({ data, portal, page }) => {
           <ul className={ `${utilStyles.list}` }>
             <li className={ utilStyles.lightText }>
               <strong>{ `${isSale ? 'Preço:' : 'Aluguel:'} ` }</strong>
-              { isSale ?
-                (<CurrencyFormat
-                  value={ pricingInfos?.price }
-                  displayType={ CURRENCY_CONFIG.displayType }
-                  thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
-                  prefix={ CURRENCY_CONFIG.prefix }
-                />)
-                :
-                (<CurrencyFormat
-                  value={ pricingInfos?.rentalTotalPrice }
-                  displayType={ CURRENCY_CONFIG.displayType }
-                  thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
-                  prefix={ CURRENCY_CONFIG.prefix }
-                />)
-              }
+              <CurrencyFormat
+                value={ isSale ? pricingInfos?.price : pricingInfos?.rentalTotalPrice }
+                displayType={ CURRENCY_CONFIG.displayType }
+                thousandSeparator={ CURRENCY_CONFIG.thousandSeparator }
+                prefix={ CURRENCY_CONFIG.prefix }
+              />
             </li>
             <li className={ utilStyles.lightText }>
               <strong>Condomínio: </strong>
