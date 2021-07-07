@@ -7,6 +7,9 @@ Esse desafio foi desenvolvido em Next.js, React, Css Modules. O projeto foi cons
 
 Abrir o link do site publicado no firefox, porque no chrome o carregamento das imagens é bloqueado.
 
+![image](https://user-images.githubusercontent.com/7591901/124693196-603d2980-deb5-11eb-938f-3893c2c34a80.png)
+*mensagem de erro do chrome*
+
 ## Instalação / Getting started
 
 Para rodar o projeto é super simples:
