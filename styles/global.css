@@ -29,6 +29,10 @@ img {
   display: block;
 }
 
+.galeryContainer{
+  background-color: #c8cf49;
+}
+
 .image-gallery-content:not(.fullscreen) .image-gallery-slide img {
   width: 100%;
   height: 300px;
